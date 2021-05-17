@@ -35,6 +35,7 @@ book.pdf: src book.tex $(TEX)
 	bibtex book
 	pdflatex book.tex
 	pdflatex book.tex
+	pandoc book.tex -o book.epub
 
 clean:
 	rm -f book.aux book.idx book.ilg book.ind book.log\
